@@ -21,7 +21,7 @@ class TwoSumTest: StringSpec({
 
             val target = list[fst] + list[snd]
 
-            val (actualFst, actualSnd) = Solution().twoSum(list.toIntArray(), target)
+            val (actualFst, actualSnd) = twoSum(list.toIntArray(), target)
             list[actualFst] + list[actualSnd] shouldBe target
         }
     }
@@ -31,7 +31,7 @@ class TwoSumTest: StringSpec({
             row(intArrayOf(3, 2, 4), 6, intArrayOf(1, 2)),
             row(intArrayOf(3, 3), 6, intArrayOf(0, 1))
         ) { arr, target, expected ->
-            Solution().twoSum(arr, target) shouldBe expected
+            twoSum(arr, target) shouldBe expected
         }
     }
 })
